@@ -1,6 +1,6 @@
-# __PROJECT_NAME__
+# Foundry Local walkthrough
 
-__DESCRIPTION__
+Microsoft Foundry Local discovery walkthrough & ressources
 
 <!-- template:start -->
 > [!IMPORTANT]
