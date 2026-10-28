@@ -18,7 +18,7 @@ comment) and bumped by Dependabot after a 7-day cooldown.
 | Workflow lint | always | actionlint (checksum-verified download) with shellcheck on every `run:` script; shellcheck and a self-test of `mask-values` (see [Public logs](#public-logs)). |
 | Package age gate | .NET or Python | `scripts/check_package_age.py`: every locked version at least 7 days old (see [supply-chain.md](supply-chain.md)). |
 | .NET build and test | .NET | `setup-dotnet` from `global.json`, NuGet cache, restore in locked mode, `dotnet format --verify-no-changes`, Release build, tests with `.trx` results uploaded. |
-| Python lint and test | Python | `setup-python` from `.python-version`, `pip install --require-hashes`, `ruff check`, `ruff format --check`, pytest (no tests = warning). |
+| Python lint and test | Python | `setup-python` from `.python-version`, `pip install --require-hashes`, editable project install with `--no-deps --no-build-isolation`, `ruff check`, `ruff format --check`, pytest (no tests = warning). |
 | **CI result** | always | Fails when any job failed or was cancelled; skipped jobs are fine. The check the ruleset requires. |
 
 PR runs cancel the previous run of the same PR; runs on `main` are never cancelled.

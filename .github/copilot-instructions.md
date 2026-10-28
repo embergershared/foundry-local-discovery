@@ -195,5 +195,14 @@ key, or a data migration) gets a migration path, a backup before it runs, and a 
 
 Microsoft Foundry Local discovery walkthrough & ressources
 
+- Python package: `src/local_chat`; install `requirements-dev.lock` with hashes from the
+  approved feed, then `.venv\Scripts\python -m pip install --no-deps --no-build-isolation -e .`.
+- Run `.venv\Scripts\python -m local_chat` or `.venv\Scripts\local-chat`; provide `--base-url`
+  and `--model` (or `LOCAL_CHAT_BASE_URL` / `LOCAL_CHAT_MODEL`). Configuration is read in
+  `parse_args` only. No server starts and no model downloads automatically.
+- Checks: `.venv\Scripts\python -m pytest`, `-m ruff check .`, `-m ruff format --check .`,
+  and `-m pip check`. Build with `-m pip wheel --no-deps --no-build-isolation --wheel-dir artifacts .`.
+- Tests stub the SDK offline; live inference additionally requires a running local model server.
+
 <!-- Add what an agent can't learn quickly from the code: build and run commands, the
      architecture in a few lines, domain terms, where logs go, and known gotchas. -->
