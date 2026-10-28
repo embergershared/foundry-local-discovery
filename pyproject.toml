@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foundry-local-discovery"
+version = "0.1.0"
+description = "A streaming chat example for a local OpenAI-compatible endpoint"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+dynamic = ["dependencies"]
+
+[project.scripts]
+local-chat = "local_chat.local_chat:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.in"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -17,6 +17,7 @@ Microsoft Foundry Local discovery walkthrough & ressources
 | Page | What it covers |
 |---|---|
 | [docs/getting-started.md](docs/getting-started.md) | **Start here:** build, run and test the project locally |
+| [DEMO_Steps.md](DEMO_Steps.md) | Foundry Local CLI and API demo walkthrough |
 | [docs/SUPPORT.md](docs/SUPPORT.md) | Questions, bugs, and what support to expect |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | Changes |
 

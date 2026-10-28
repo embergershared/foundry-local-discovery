@@ -7,4 +7,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## Unreleased
 
 ### Added
+- Installable local chat CLI, Python 3.13 environment setup, hashed dependency locks,
+  and offline configuration/streaming tests (#4).
+- Foundry Local demo steps using the full model ID for API requests and package installation in CI (#4).
 - Repository created from [embergershared/repo-template](https://github.com/embergershared/repo-template).
